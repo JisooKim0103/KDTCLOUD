@@ -1,0 +1,56 @@
+.bg-image-vertical {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+    padding-bottom: 10%;
+
+    }
+
+#logo{
+    padding-top:80px;
+    }
+body{
+margin-bottom: 0%;
+}
+.btn{
+    background-color:#194a7a;
+    color:white;
+}
+    @media (min-width: 1025px) {
+    .h-custom-2 {
+    height: 100%;
+    }
+    }
+
+
+/* footer */
+footer {
+    margin-top: 56px;
+    padding-bottom: 40px;
+    height: auto;
+    width: 100;
+    background-color: black;
+}
+
+footer .container{
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+footer p,
+footer i{
+    color: white;
+}
+
+footer .social-icons i{
+font-size: 24px;
+}
+
+footer .social-icons i:not(:last-child){
+margin-right: 24px;
+}
