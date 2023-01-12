@@ -110,6 +110,9 @@ margin-left: 1rem;
     padding: 1rem;
    }
 
+.accordion .accordion-item{
+border: none; 
+}
 .main-container{
 margin: 1rem 2rem 0 18rem;
 }
