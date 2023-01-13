@@ -117,6 +117,15 @@ border: none;
 margin: 1rem 2rem 0 18rem;
 }
 
+.result {
+position: absolute;
+color: blue;
+text-transform:capitalize;
+
+
+}
+
+
 /* footer */
 .footer {
     padding: 20px;

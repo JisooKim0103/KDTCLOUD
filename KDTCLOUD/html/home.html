@@ -62,7 +62,7 @@
             <button class="btn d-md-none d-block close-btn px-1 py-0 text-white"> <i class="bi bi-x-lg"></i></button>
     </div>
  <!-- FILE TYPES -->
-    <ul class="list-unstyled px-2">
+    <ul class="align-items-center">
         <div class="heading ">
             <br>
             <p class="fw-semibold px-5"> File types &nbsp; <i class="bi bi-briefcase-fill"></i> </p>
@@ -100,7 +100,7 @@
 
     <!-- OTHERS -->
  <hr class="h-color" mx-3 style="color:#194a7a;"> 
-    <ul c lass="list-unstyled px-2">
+    <ul class="align-items-center">
         <div class="heading">
             <p class="fw-semibold  px-5"> Others &nbsp;<i class="bi bi-list"></i> </p>
         </div>
@@ -131,7 +131,7 @@
 
    <!-- BUSSINESS UNITS -->
   <hr class="h-color" mx-3 style="color:#194a7a;"> 
-        <ul class="list-unstyled px-2">
+        <ul class="">
             <div class="heading">
             <p class="fw-semibold px-4"> Bussiness Units &nbsp;<i class="bi bi-briefcase-fill"></i> </p>
         </div>
@@ -173,14 +173,14 @@
         <div class="heading">
             <p class="fw-semibold px-4 text-center"> Categories &nbsp; <i class="bi bi-list-ul"></i> </p>
         </div>
-
+        <ul class="align-items-center">
         <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label" for="defaultCheck1"> All
-                    <span class="badge bg-primary rounded-pill">540</span>
-                </label>
+            <label class="form-check-label" for="defaultCheck1"> All
+                <span class="badge bg-primary rounded-pill">540</span>
+            </label>
         </div>	  
-
+        </ul>
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
@@ -270,25 +270,28 @@
 <div class="main-container d-flex flex-column p-0 "> 
     
     <!-- sort result and dropwdown filter -->
-    <header class="dropwdown">
-        <div class="dropdown d-flex justify-content-end align-items-center p-0 ">
-	        <p class="m-0 pe-2"> Sort by: </p>
+    <header class="dropwdown px-3 pt-3">
+        <div class="dropdown d-flex justify-content-between align-items-center p-0 ">
+            <p class="lh-sm m-0 ">Search result for</p>
+            <div class="d-flex p-0 align-items-center">
+                <p class="m-0 p-0"> Sort by: </p>
         	    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-	             Newest
+                    Newest
 	            </button>
-	        <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Oldest</a></li>
-	            <li><a class="dropdown-item" href="#">A-Z</a></li>
-	            <li><a class="dropdown-item" href="#">Z-A</a></li>
-	        </ul>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Oldest</a></li>
+                    <li><a class="dropdown-item" href="#">A-Z</a></li>
+                    <li><a class="dropdown-item" href="#">Z-A</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
     <!-- PHOTO TITLE  -->
 	 <div class="m-3"> 
 		 <div class="col-12">
-			 <div class="p-2 border"  style="background-color: #194a7a;">
-				    <h3 class="text-white text-center"> PHOTOS </h3>
+			 <div class="p-2 border p-2" " style="background-color: #194a7a;">
+				    <h3 class="text-white m-0"> Photos </h3>
 		     </div>
 		 </div>
     </div>
@@ -346,8 +349,8 @@
     <!-- START OF VIDEO -->
     <div class="m-3"> 
         <div class="col-12">
-            <div class="p-2 border"  style="background-color: #194a7a;">
-                <h3 class="text-white text-center"> VIDEOS </h3>
+            <div class="p-2 border p-2"  style="background-color: #194a7a;">
+                <h3 class="text-white m-0"> Videos </h3>
             </div>
         </div>
     </div>
@@ -398,8 +401,8 @@
     <!-- START OF DOCUMENT SECTION -->
     <div class="m-3"> 
         <div class="col-12">
-            <div class="p-2 border"  style="background-color: #194a7a;">
-                <h3 class="text-white text-center"> DOCUMENTS </h3>
+            <div class="p-2 border p-2"  style="background-color: #194a7a;">
+                <h3 class="text-white m-0"> Documents </h3>
             </div>
         </div>
     </div>
