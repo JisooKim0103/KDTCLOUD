@@ -5,3 +5,4 @@
         $("input[type='text']").toggleClass("active");
     });
 });
+

@@ -15,9 +15,11 @@
   </head>
   <body>
   <!-- NAVBAR -->
-<header class="navbar fixed-top navbar-expand-lg">
+
+  <header class="navbar fixed-top navbar-expand-lg">
 	<div class="container-fluid">
-	  <a class="navbar-brand" href="#">KDT Cloud Navigator</a>
+        <img  src="../img/logo.jpg" >
+	  <a class="navbar-brand fst-italic fs-5" href="#">KDT Cloud Navigator</a>
 	  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	  </button>
@@ -25,32 +27,34 @@
 		<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 		 
 		  <li class="nav-item">
-			<a class="nav-link" href="#qms">QMS</a>
+			<a class="nav-link" href="#">INTRANET</a>
 		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="#photo">Pictures and Videos</a>
+
+          <li class="nav-item">
+			<a class="nav-link" href="#">KDT FORMS</a>
 		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="#docs">Documents</a>
-		  </li> 
+		 
+          <li class="nav-item">
+			<a class="nav-link" href="#">KDT PORTAL</a>
+		  </li>
+		 
 		</ul>	
 	  </div>
 	  <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control mdb-autocomplete me-2" id="form-autocomplete" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-light" type="submit">Search</button>
       </form>
 	
-		<div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                USER
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Admin</a></li>
-              <li><a class="dropdown-item" href="#">Profile</a></li>
-              <li><a class="dropdown-item" href="#">File Upload</a></li>
-              <button type="button" class="btn btn-primary">Log Out</button>
-
-            </ul>
+		<div class="log p-3">
+            <div class="dropdown">
+                <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="../html/profile.html">Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Upload File</a></li>
+                </ul>
+              </div>
        </div>
 	  </div>
 	</div>
@@ -275,7 +279,7 @@
             <p class="lh-sm m-0 ">Search result for</p>
             <div class="d-flex p-0 align-items-center">
                 <p class="m-0 p-0"> Sort by: </p>
-        	    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        	    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Newest
 	            </button>
                 <ul class="dropdown-menu">
@@ -478,6 +482,7 @@
     </div>    
 </footer>
 
+    <script src="../js/home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
   </body>
