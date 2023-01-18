@@ -98,6 +98,15 @@ margin-top: 2rem;
 margin-left: 1rem;
 }
 
+#right_nav{
+   
+        /* background:#194a7a; */
+        min-width: 250px;
+        max-width: 250px;
+        position: absolute;
+        margin-top: 2rem;
+        margin-left: 1rem;
+}
 .photo-container .col{
     padding: 1rem;
 
