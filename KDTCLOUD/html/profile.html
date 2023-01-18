@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-
-    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <title>Profile Page</title>
 </head>
 
 <header class="navbar fixed-top navbar-expand-lg">
@@ -57,7 +59,7 @@
             <div class="col">
               <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
                 <ol class="breadcrumb mb-0">
-                  <li class="breadcrumb-item"><a href="../html/home.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
                   <li class="breadcrumb-item active" aria-current="page">User Profile</li>
                 </ol>
               </nav>
@@ -69,12 +71,67 @@
               <div class="card mb-4">
                 <div class="card-body text-center">
                   <img src="../img/freen.jpg" alt="avatar"
-                    class="rounded-circle img-fluid" style="width: 150px;">
+                    class="img-fluid" style="height: 15rem; width: 15rem;">
                   <h5 class="my-3">Freen Armstrong</h5>
                   <p class="text-muted mb-1">Thai Model/Actress</p>
                   <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
                   <div class="d-flex justify-content-center mb-2">
-                    <button type="button" class="btn btn-primary">Upload File</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#picturemodal">Upload File 
+
+                    </button>
+                    <div class="modal fade" id="picturemodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-xl">
+                        <div class="modal-content  d-flex flex-column p-0">
+                          <div class="modal-header text-white" style="background: #194a7a;">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="btn-close bg-white"  data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body d-flex">
+                            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                              <div class="carousel-inner"> 
+                                <div class="carousel-item active">
+                                  <img src="../img/beck.jpg" class="img-fluid w-100 h-100" alt="pic">
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="../img/mon.jpg" class="img-fluid w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="../img/sam.jpg" class="img-fluid w-100" alt="...">
+                                </div>
+                              </div>
+                              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                            </div>
+                          </div>
+                          
+                         <div class="rightbar"  id="right_nav"> 
+                            <div class="dropdown d-flex flex-column">
+                                  <button class="btn btn-outline-primary dropdown-toggle justify-content-between" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                     Current Group
+                                  </button>
+                                 <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">EE</a></li>
+                                    <li><a class="dropdown-item" href="#">ASH</a></li>
+                                    <li><a class="dropdown-item" href="#">SYS</a></li>
+                                  </ul>
+                              </div>
+                         </div>
+
+
+
+                          <div class="modal-footer text-white" style="background: #194a7a;">
+                            
+                            <button type="button" class="btn btn-outline-light align-items-center">Save to Review</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -98,14 +155,14 @@
               </div>
             </div>
             <div class="col-lg-8">
-              <div class="card mb-4">
+              <div class="card mb-4" >
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-3">
                       <p class="mb-0">Full Name</p>
                     </div>
                     <div class="col-sm-9">
-                      <p class="text-muted mb-0">Sarocha Chankimha Armstrong</p>
+                      <p class="text-muted mb-0"> Freen Sarocha Chankimha Armstrong</p>
                     </div>
                   </div>
                   <hr>
@@ -155,82 +212,122 @@
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="card mb-4 mb-md-0">
-                    <div class="card-body">
-                      <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status
-                      </p>
-                      <p class="mb-1" style="font-size: .77rem;">Web Design</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
-                      <div class="progress rounded mb-2" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </div>
+             
+              <div class="col-lg-16">
+                <div class="card mb-5">
+                  <table id="status" class="table table-bordered" style="width:100%">
+                    <thead class="text-white" style="background-color: #194a7a;">
+                        <tr>
+                            <th>#</th>
+                            <th>File Name</th>
+                            <th>File Type</th>
+                            <th>Date Upload</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>System Architect</td>
+                            <td>Word doc</td>
+                            <td>2011-04-25</td>
+                            <td class="table-primary">Pending</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Accountant</td>
+                            <td>Powerpoint</td>
+                            <td>2011-07-25</td>
+                            <td class="table-warning">To Tag</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Junior Technical Author</td>
+                            <td>PDF</td>
+                            <td>2009-01-12</td>
+                            <td class="table-danger">Rejected</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Senior Javascript Developer</td>
+                            <td>Excel</td>
+                            <td>2012-03-29</td>
+                            <td class="table-success">Complete</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Accountant</td>
+                            <td>Word doc</td>
+                            <td>2008-11-28</td>
+                            <td class="table-primary">Pending</td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>Junior Technical Author</td>
+                          <td>PDF</td>
+                          <td>2009-01-12</td>
+                          <td class="table-danger">Rejected</td>
+                      </tr>
+                        <tr>
+                          <td>7</td>
+                          <td>Senior Javascript Developer</td>
+                          <td>Excel</td>
+                          <td>2012-03-29</td>
+                          <td class="table-success">Complete</td>
+                       </tr>
+                       <tr>
+                          <td>8</td>
+                          <td>Accountant</td>
+                          <td>Powerpoint</td>
+                          <td>2011-07-25</td>
+                          <td class="table-warning">To Tag</td>
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td>System Architect</td>
+                        <td>Word doc</td>
+                        <td>2011-04-25</td>
+                        <td class="table-primary">Pending</td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td>Junior Technical Author</td>
+                      <td>PDF</td>
+                      <td>2009-01-12</td>
+                      <td class="table-danger">Rejected</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>Accountant</td>
+                    <td>Powerpoint</td>
+                    <td>2011-07-25</td>
+                    <td class="table-warning">To Tag</td>
+                </tr>
+
+                    </tbody>
+                </table>
                 </div>
-                <div class="col-md-6">
-                  <div class="card mb-4 mb-md-0">
-                    <div class="card-body">
-                      <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status
-                      </p>
-                      <p class="mb-1" style="font-size: .77rem;">Web Design</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
-                      <div class="progress rounded mb-2" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      
+      <footer class="footer">
+        <div class="py-4 bg-dark-gray text-gray-300 ">
+            <div class="container">
+                <div class="row-align-items-center">
+                    <div class="col-md-12 text-center text-md-start">
+                        <p class="text-sm mb-md-0">&copy; 2023 KDT System Department. All Right Reserved. </p>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </footer>
       
     <script src="../js/home.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
