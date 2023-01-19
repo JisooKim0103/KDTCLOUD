@@ -19,7 +19,7 @@
       
               <div class="px-5 ms-xl-4" id="logo">
                 <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #194a7a;"></i>
-                <span class="h1 fw-bold mb-0">KDT Cloud Navigator <i class="bi bi-search"></i></span> 
+                <span class="h1 fw-bold mb-0">KDT Cloud Navigator</span> 
               </div>
       
               <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
@@ -41,12 +41,43 @@
                   <div class="d-grid gap-2"">
                     <button class="btn btn-info btn-lg btn-block" type="button" >Login</button>
                   </div>
-      
-                  <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
+                  
+                  <button type="link" class="btn btn-link bg-white" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color:#194a7a;">Forgot Password?</button>
+                 <br>
+                 <br>
                   <p>Don't have an account? <a href="#!" class="link" style="color: #194a7a;">Register here</a></p>
-      
                 </form>
-      
+ <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header" style="background-color: #194a7a;">
+		  <h1 class="modal-title fs-5 text-white" id="exampleModalLabel" >Forgot Password</h1>
+		  <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<form>
+				<div class="mb-3">
+				  <label for="exampleInputEmail1" class="form-label">Email address</label>
+				  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+				  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+				</div>
+				<div class="mb-3">
+				  <label for="exampleInputPassword1" class="form-label"> New Password</label>
+				  <input type="password" class="form-control" id="exampleInputPassword1">
+				</div>
+				
+				<button type="submit" class="btn btn-primary">Submit</button>
+			  </form>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+		  <button type="button" class="btn btn-primary">Save changes</button>
+		</div>
+	  </div>
+	</div>
+  </div>
+
               </div>
       
             </div>
