@@ -98,12 +98,14 @@ margin-top: 2rem;
 margin-left: 1rem;
 }
 
-#right_nav{
-   
-       
-        position: absolute;
-       
-}
+ /* #right_nav{
+   position: absolute;
+
+   flex-direction: column;
+ 
+   align-items:flex-end ;
+ 
+} */
 .photo-container .col{
     padding: 1rem;
 
