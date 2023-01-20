@@ -1,368 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <title>Profile Page</title>
-</head>
+        <link rel="stylesheet" href="../css/home.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
 
-<header class="navbar fixed-top navbar-expand-lg">
-	<div class="container-fluid">
-	  <a class="navbar-brand fst-italic fs-5" href="#">KDT Cloud Navigator</a>
-	  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	  </button>
-	  <div class="collapse navbar-collapse" id="navbarNav">
-		<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-		 
-		  <li class="nav-item">
-			<a class="nav-link" href="#">INTRANET</a>
-		  </li>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <title>Profile Page</title>
+    </head>
 
-          <li class="nav-item">
-			<a class="nav-link" href="#">KDT FORMS</a>
-		  </li>
-		 
-          <li class="nav-item">
-			<a class="nav-link" href="#">KDT PORTAL</a>
-		  </li>
-		 
-		</ul>	
-	  </div>
-	  <form class="d-flex">
-        <input class="form-control mdb-autocomplete me-2" id="form-autocomplete" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-light" type="submit">Search</button>
-      </form>
-	
-		<div class="log p-3">
-            <button class="btn btn-outline-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                LOG OUT
-            </button>
-       </div>
-	  </div>
-	</div>
-</header>
+    <header class="p-1">
+        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand  fst-italic fs-5" href="#">KDT Cloud Navigator</a>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">INTRANET</a>
+                        </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">KDT FORMS</a>
+                        </li>
 
-<div class="container d-flex">
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-xl">
-	  <div class="modal-content">
-		<div class="modal-header" style="background-color: #194a7a;">
-		  <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Modal title</h1>
-		  <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
-		</div>
-		
-		<div class="modal-body d-flex" style="flex-direction: row-reverse;">	
-			<section class="section-padding " id="right_nav">
-				<div class="sidebar" >
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">KDT PORTAL</a>
+                        </li>
 
-					<div class="dropdown">
-						<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-						  Dropdown button
-						</button>
-						<ul class="dropdown-menu">
-						  <li><a class="dropdown-item" href="#">Action</a></li>
-						  <li><a class="dropdown-item" href="#">Another action</a></li>
-						  <li><a class="dropdown-item" href="#">Something else here</a></li>
-						</ul>
-					</div>
-
-					<div class="dropdown">
-						<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-						  Dropdown button
-						</button>
-						<ul class="dropdown-menu">
-						  <li><a class="dropdown-item" href="#">Action</a></li>
-						  <li><a class="dropdown-item" href="#">Another action</a></li>
-						  <li><a class="dropdown-item" href="#">Something else here</a></li>
-						</ul>
-				  </div>
-
-					<div class="dropdown">
-						<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-						  Dropdown button
-						</button>
-						<ul class="dropdown-menu">
-						  <li><a class="dropdown-item" href="#">Action</a></li>
-						  <li><a class="dropdown-item" href="#">Another action</a></li>
-						  <li><a class="dropdown-item" href="#">Something else here</a></li>
-						</ul>
-				  </div>
-				</div>
-			</section>
-
-			<div class="section d-flex" id="carousel" style="justify-content: flex-end" >
-				<div class="carousel">
-					<div id="carouselExample" class="carousel slide"  data-interval="false" >
-						<div class="carousel-inner">
-						  <div class="carousel-item active">
-							<img src="../img/freen.jpg" class="img-fluid" alt="...">
-						  </div>
-						  <div class="carousel-item">
-							<img src="../img/beck.jpg" class="img-fluid" alt="...">
-						  </div>
-						  <div class="carousel-item">
-							<img src="../img/mon.jpg" class="img-fluid" alt="...">
-						  </div>
-						</div>
-						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-						  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						  <span class="visually-hidden">Previous</span>
-						</button>
-						<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-						  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-						  <span class="visually-hidden">Next</span>
-						</button>
-					  </div>
-				</div>
-			</div>
-
-
-		</div>
-		<div class="modal-footer" style="background-color: #194a7a;">
-		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-		  <button type="button" class="btn btn-primary">Save changes</button>
-		</div>
-	  </div>
-	</div>
-  </div>
-</div>
-
-
-<body class="body" style="height:100vh;">
-    <section style="background-color: #eee;">
-        <div class="container py-5">
-          <div class="row">
-            <div class="col">
-              <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
-                <ol class="breadcrumb mb-0">
-                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">User Profile</li>
-                </ol>
-              </nav>
+                    </ul>
+                    <div class="log p-3">
+                        <button class="btn btn-outline-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            LOG OUT
+                        </button>
+                    </div>
+                </div>
             </div>
-          </div>
-      
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="card mb-4">
-                <div class="card-body text-center">
-                  <img src="../img/freen.jpg" alt="avatar"
-                    class="img-fluid" style="height: 15rem; width: 15rem;">
-                  <h5 class="my-3">Freen Armstrong</h5>
-                  <p class="text-muted mb-1">Thai Model/Actress</p>
-                  <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
-                  <div class="d-flex justify-content-center mb-2">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Upload File
-                    </button>
-				 </div>
-                </div>
-              </div>
+        </nav>
+    </header>
 
-              <div class="card mb-4 mb-lg-0">
-                <div class="card-body p-0">
-                  <ul class="list-group list-group-flush rounded-3">
-                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                        <i class="bi bi-envelope-at-fill">Outlook</i>
-                        <a class="mb-0" href="#">armstrong-kdt@corp.khi.co.jp</a> 
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                        <i class="bi bi-microsoft-teams text-start" style="color: #333333;"> MS Teams</i>
-                        <a class="mb-0 text-end" href="#">armstrong-kdt@global.kawasaki.com</a> 
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                        <i class="bi bi-book-half" style="color: #000000;">Lotus Notes</i>
-                        <a class="mb-0" href="#">armstrong-kdt</a> 
-                    </li>
-                  </ul>
+
+    <div
+        class="container d-flex">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #194a7a;">
+                        <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body d-flex" style="flex-direction: row-reverse;">
+                        <section class="section-padding " id="right_nav">
+                            <div class="sidebar">
+
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Dropdown button
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Dropdown button
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Dropdown button
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="section d-flex" id="carousel" style="justify-content: flex-end">
+                            <div class="carousel">
+                                <div id="carouselExample" class="carousel slide" data-interval="false">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="../img/freen.jpg" class="img-fluid" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="../img/beck.jpg" class="img-fluid" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="../img/mon.jpg" class="img-fluid" alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer" style="background-color: #194a7a;">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="col-lg-8">
-              <div class="card mb-4" >
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <p class="mb-0">Full Name</p>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-muted mb-0"> Freen Sarocha Chankimha Armstrong</p>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <p class="mb-0">Acess type</p>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-muted mb-0">Admin</p>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <p class="mb-0">Username</p>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-muted mb-0">Freen</p>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <p class="mb-0">Email</p>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-muted mb-0">armstrong-KDT/P/KHI</p>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <p class="mb-0">Department Group</p>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-muted mb-0">System Group</p>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <p class="mb-0">Position</p>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-muted mb-0">Software Engineer</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-             
-
-              <div class="col-lg-16">
-                <div class="card mb-5">
-                  <table id="status" class="table table-bordered" style="width:100%">
-                    <thead class="text-white" style="background-color: #194a7a;">
-                        <tr>
-                            <th>#</th>
-                            <th>File Name</th>
-                            <th>File Type</th>
-                            <th>Date Upload</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>System Architect</td>
-                            <td>Word doc</td>
-                            <td>2011-04-25</td>
-                            <td class="table-primary">Pending</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Accountant</td>
-                            <td>Powerpoint</td>
-                            <td>2011-07-25</td>
-                            <td class="table-warning">To Tag</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Junior Technical Author</td>
-                            <td>PDF</td>
-                            <td>2009-01-12</td>
-                            <td class="table-danger">Rejected</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Senior Javascript Developer</td>
-                            <td>Excel</td>
-                            <td>2012-03-29</td>
-                            <td class="table-success">Complete</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Accountant</td>
-                            <td>Word doc</td>
-                            <td>2008-11-28</td>
-                            <td class="table-primary">Pending</td>
-                        </tr>
-                        <tr>
-                          <td>6</td>
-                          <td>Junior Technical Author</td>
-                          <td>PDF</td>
-                          <td>2009-01-12</td>
-                          <td class="table-danger">Rejected</td>
-                      </tr>
-                        <tr>
-                          <td>7</td>
-                          <td>Senior Javascript Developer</td>
-                          <td>Excel</td>
-                          <td>2012-03-29</td>
-                          <td class="table-success">Complete</td>
-                       </tr>
-                       <tr>
-                          <td>8</td>
-                          <td>Accountant</td>
-                          <td>Powerpoint</td>
-                          <td>2011-07-25</td>
-                          <td class="table-warning">To Tag</td>
-                      </tr>
-                      <tr>
-                        <td>9</td>
-                        <td>System Architect</td>
-                        <td>Word doc</td>
-                        <td>2011-04-25</td>
-                        <td class="table-primary">Pending</td>
-                    </tr>
-                    <tr>
-                      <td>10</td>
-                      <td>Junior Technical Author</td>
-                      <td>PDF</td>
-                      <td>2009-01-12</td>
-                      <td class="table-danger">Rejected</td>
-                  </tr>
-                  <tr>
-                    <td>11</td>
-                    <td>Accountant</td>
-                    <td>Powerpoint</td>
-                    <td>2011-07-25</td>
-                    <td class="table-warning">To Tag</td>
-                </tr>
-
-                    </tbody>
-                </table>
-                </div>
-              </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
+    </div>
 
-      <footer class="footer">
-        <div class="py-4 bg-dark-gray text-gray-300 ">
-            <div class="container">
-                <div class="row-align-items-center">
-                    <div class="col-md-12 text-center text-md-start">
-                        <p class="text-sm mb-md-0">&copy; 2023 KDT System Department. All Right Reserved. </p>
+
+    <body class="body" style="height:100vh;">
+        <section style="background-color: #eee;">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col">
+                        <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+                            <ol class="breadcrumb mb-0">
+                                <li class="breadcrumb-item">
+                                    <a href="../index.html">Home</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card mb-4">
+                            <div class="card-body text-center">
+                                <img src="../img/freen.jpg" alt="avatar" class="img-fluid" style="height: 15rem; width: 15rem;">
+                                <h5 class="my-3">Freen Armstrong</h5>
+                                <p class="text-muted mb-1">Thai Model/Actress</p>
+                                <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
+                                <div class="d-flex justify-content-center mb-2">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Upload File
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4 mb-lg-0">
+                            <div class="card-body p-0">
+                                <ul class="list-group list-group-flush rounded-3">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                        <i class="bi bi-envelope-at-fill">Outlook</i>
+                                        <a class="mb-0" href="#">armstrong-kdt@corp.khi.co.jp</a>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                        <i class="bi bi-microsoft-teams text-start" style="color: #333333;">
+                                            MS Teams</i>
+                                        <a class="mb-0 text-end" href="#">armstrong-kdt@global.kawasaki.com</a>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                        <i class="bi bi-book-half" style="color: #000000;">Lotus Notes</i>
+                                        <a class="mb-0" href="#">armstrong-kdt</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Full Name</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="text-muted mb-0">
+                                            Freen Sarocha Chankimha Armstrong</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Acess type</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="text-muted mb-0">Admin</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Username</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="text-muted mb-0">Freen</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Email</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="text-muted mb-0">armstrong-KDT/P/KHI</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Department Group</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="text-muted mb-0">System Group</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Position</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="text-muted mb-0">Software Engineer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-16">
+                            <div class="card mb-5">
+                                <table id="status" class="table table-bordered" style="width:100%">
+                                    <thead class="text-white" style="background-color: #194a7a;">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>File Name</th>
+                                            <th>File Type</th>
+                                            <th>Date Upload</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>System Architect</td>
+                                            <td>Word doc</td>
+                                            <td>2011-04-25</td>
+                                            <td class="table-primary">Pending</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Accountant</td>
+                                            <td>Powerpoint</td>
+                                            <td>2011-07-25</td>
+                                            <td class="table-warning">To Tag</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Junior Technical Author</td>
+                                            <td>PDF</td>
+                                            <td>2009-01-12</td>
+                                            <td class="table-danger">Rejected</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Senior Javascript Developer</td>
+                                            <td>Excel</td>
+                                            <td>2012-03-29</td>
+                                            <td class="table-success">Complete</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Accountant</td>
+                                            <td>Word doc</td>
+                                            <td>2008-11-28</td>
+                                            <td class="table-primary">Pending</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Junior Technical Author</td>
+                                            <td>PDF</td>
+                                            <td>2009-01-12</td>
+                                            <td class="table-danger">Rejected</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>Senior Javascript Developer</td>
+                                            <td>Excel</td>
+                                            <td>2012-03-29</td>
+                                            <td class="table-success">Complete</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>Accountant</td>
+                                            <td>Powerpoint</td>
+                                            <td>2011-07-25</td>
+                                            <td class="table-warning">To Tag</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>System Architect</td>
+                                            <td>Word doc</td>
+                                            <td>2011-04-25</td>
+                                            <td class="table-primary">Pending</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>Junior Technical Author</td>
+                                            <td>PDF</td>
+                                            <td>2009-01-12</td>
+                                            <td class="table-danger">Rejected</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td>Accountant</td>
+                                            <td>Powerpoint</td>
+                                            <td>2011-07-25</td>
+                                            <td class="table-warning">To Tag</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>    
-    </footer>
-      
-   
-    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
-</html>
+        </div>
+    </body>
+</html></section><footer class="footer">
+<div class="py-4 bg-dark-gray text-gray-300 ">
+    <div class="container">
+        <div class="row-align-items-center">
+            <div class="col-md-12 text-center text-md-start">
+                <p class="text-sm mb-md-0">&copy; 2023 KDT System Department. All Right Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script></body></html>

@@ -9,6 +9,7 @@
         outline: none;
         box-sizing: border-box;
         font-family: 'Montserrat', sans-serif;
+        overflow-x: hidden;
     }
 
 .navbar{
@@ -81,31 +82,11 @@ color: #7593af;
 
 @media screen and (min-width: 768px) {
 
-.sidebar{
-border: 2px solid #194a7a;
-}
 
 .header-box{
 padding-top: 2%;
 }
 
-#side_nav{
-/* background:#194a7a; */
-min-width: 250px;
-max-width: 250px;
-position: absolute;
-margin-top: 2rem;
-margin-left: 1rem;
-}
-
- /* #right_nav{
-   position: absolute;
-
-   flex-direction: column;
- 
-   align-items:flex-end ;
- 
-} */
 .photo-container .col{
     padding: 1rem;
 
@@ -145,6 +126,73 @@ text-transform:capitalize;
     background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1))
     }
 
+
+    #viewport {
+        padding-left: 250px;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+      }
+      
+      #content {
+        width: 100%;
+        position: relative;
+        margin-right: 0;
+      }
+      
+      /* Sidebar Styles */
+      
+      #sidebar {
+   
+        z-index: 1000;
+        position: absolute;
+        left: 250px;
+        width: 280px;
+        height: 110%;
+        margin-left: -240px;
+        overflow-y: auto;
+        border: 2px solid #194a7a;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+      }
+      
+      #sidebar header {
+        background-color: #194a7a;
+        font-size: 20px;
+        line-height: 52px;
+        text-align: center;
+      }
+      
+      #sidebar header a {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+      
+      #sidebar header a:hover {
+        color: #fff;
+      }
+      
+      
+      #sidebar .nav a{
+        background: none;
+        border-bottom: 1px solid #ffffff;
+        color: #CFD8DC;
+        font-size: 14px;
+        padding: 16px 24px;
+      }
+      
+      #sidebar .nav a:hover{
+        background: none;
+        color: #ECEFF1;
+      }
+      
+      #sidebar .nav a i{
+        margin-right: 16px;
+      }
 /* footer */
 .footer {
     padding: 20px;
