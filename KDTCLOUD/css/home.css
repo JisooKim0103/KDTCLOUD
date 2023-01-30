@@ -193,21 +193,18 @@ text-transform:capitalize;
       #sidebar .nav a i{
         margin-right: 16px;
       }
-/* footer */
-.footer {
-    padding: 20px;
-    width: 100;
-    background-color: black;
+  
+  
+ footer.sticky-footer {
+  padding: 2rem 0;
+  flex-shrink: 0;
 }
 
-.footer .container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
+footer.sticky-footer .copyright {
+  line-height: 1;
+  font-size: 0.8rem;
 }
 
-.footer p{
-    color: white;
-}
+
+
 }

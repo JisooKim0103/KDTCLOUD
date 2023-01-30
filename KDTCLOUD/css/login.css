@@ -42,15 +42,14 @@ footer .container{
 
 }
 
-footer p,
-footer i{
-    color: white;
-}
-
-footer .social-icons i{
-font-size: 24px;
-}
-
-footer .social-icons i:not(:last-child){
-margin-right: 24px;
-}
+  
+footer.sticky-footer {
+    padding: 2rem 0;
+    flex-shrink: 0;
+  }
+  
+  footer.sticky-footer .copyright {
+    line-height: 1;
+    font-size: 0.8rem;
+  }
+  

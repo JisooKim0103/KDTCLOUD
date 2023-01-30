@@ -59,22 +59,17 @@ color: #7593af;
     body { padding-top: 80px; 
 }
 
-    .footer {
-        padding: 20px;
-        width: 100;
-        background-color: black;
-    }
-    
-    .footer .container{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    
-    }
-    
-    .footer p{
-        color: white;
-    }
+  
+footer.sticky-footer {
+    padding: 2rem 0;
+    flex-shrink: 0;
+  }
+  
+  footer.sticky-footer .copyright {
+    line-height: 1;
+    font-size: 0.8rem;
+  }
+  
 
 /* .carousel{
     min-height: 50%;
